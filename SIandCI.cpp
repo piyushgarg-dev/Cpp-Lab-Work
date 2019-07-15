@@ -1,5 +1,5 @@
 /*
-    Author: Piyush Garg
+    Author: Piyush
  */
 
 #include <iostream>
