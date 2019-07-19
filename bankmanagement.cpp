@@ -1,3 +1,6 @@
+/*
+    Author Piyush
+ */
 #include <iostream>
 #include <stdlib.h>
 
@@ -289,7 +292,7 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
-                    cout << "ID\tName\1tBalance\tCity\n";
+                    cout << "ID\tName\tBalance\tCity\n";
                     cout << c5.getid() << "\t" << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity() << endl;
                     break;
                 case 2: // debit;
@@ -398,7 +401,7 @@ int main()
             break;
         case 4:
             // total donations ;
-            cout << "Total Donations: " << Bank::gettotaldonation();
+            cout << "Total Donations: " << Bank::gettotaldonation() << endl;
 
             break;
         default:
