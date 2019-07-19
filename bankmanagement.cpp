@@ -58,6 +58,7 @@ int Bank::total_donation = 0;
 int main()
 {
     Bank c1, c2, c3, c4, c5;
+    int a, b, c, d, e;
     cout << "Client 1" << endl;
     c1.setDetails();
     cout << "Client 2" << endl;
@@ -329,11 +330,11 @@ int main()
         case 2:
             // getMaxDonation ;
 
-            int a = c1.getdonation();
-            int b = c2.getdonation();
-            int c = c3.getdonation();
-            int d = c4.getdonation();
-            int e = c5.getdonation();
+            a = c1.getdonation();
+            b = c2.getdonation();
+            c = c3.getdonation();
+            d = c4.getdonation();
+            e = c5.getdonation();
 
             if (a > b && a > c && a > d && a > e)
             {
@@ -370,23 +371,23 @@ int main()
             cout << "Search By City" << endl;
             cout << "Enter City first Char: ";
             cin >> city;
-            if (city == c1.getcity[0])
+            if (city == c1.getcity()[0])
             {
                 cout << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity() << endl;
             }
-            if (city == c2.getcity[0])
+            if (city == c2.getcity()[0])
             {
                 cout << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity() << endl;
             }
-            if (city == c3.getcity[0])
+            if (city == c3.getcity()[0])
             {
                 cout << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity() << endl;
             }
-            if (city == c4.getcity[0])
+            if (city == c4.getcity()[0])
             {
                 cout << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity() << endl;
             }
-            if (city == c5.getcity[0])
+            if (city == c5.getcity()[0])
             {
                 cout << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity() << endl;
             }
