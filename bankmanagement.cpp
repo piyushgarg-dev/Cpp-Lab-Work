@@ -50,7 +50,7 @@ public:
     string getcity() { return client_city; }
     int getbalance() { return client_balance; }
     int getdonation() { return client_donation; }
-    static int gettotaldonation(){return total_donation;}
+    static int gettotaldonation() { return total_donation; }
 };
 
 int Bank::total_donation = 0;
@@ -58,10 +58,15 @@ int Bank::total_donation = 0;
 int main()
 {
     Bank c1, c2, c3, c4, c5;
+    cout << "Client 1" << endl;
     c1.setDetails();
+    cout << "Client 2" << endl;
     c2.setDetails();
+    cout << "Client 3" << endl;
     c3.setDetails();
+    cout << "Client 4" << endl;
     c4.setDetails();
+    cout << "Client 5" << endl;
     c5.setDetails();
 
     int ch = 1;
@@ -323,6 +328,7 @@ int main()
             break;
         case 2:
             // getMaxDonation ;
+
             int a = c1.getdonation();
             int b = c2.getdonation();
             int c = c3.getdonation();
@@ -332,60 +338,67 @@ int main()
             if (a > b && a > c && a > d && a > e)
             {
                 cout << "Name\tBalance\tCity\n";
-                cout << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity()<<endl;
+                cout << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity() << endl;
             }
             else if (b > a && b > c && b > d && b > e)
             {
                 cout << "Name\tBalance\tCity\n";
-                cout << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity()<<endl;
+                cout << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity() << endl;
             }
             else if (c > b && c > a && c > d && c > e)
             {
                 cout << "Name\tBalance\tCity\n";
-                cout << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity()<<endl;
+                cout << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity() << endl;
             }
             else if (d > b && d > c && d > a && d > e)
             {
                 cout << "Name\tBalance\tCity\n";
-                cout << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity()<<endl;
+                cout << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity() << endl;
             }
             else if (e > b && e > c && e > d && e > a)
             {
                 cout << "Name\tBalance\tCity\n";
                 cout << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity();
             }
-            else{
-                cout<<"Error Occured"<<endl;
+            else
+            {
+                cout << "Error Occured" << endl;
             }
             break;
         case 3:
             //searchbycity ;
-            cout<<"Search By City"<<endl;
+            cout << "Search By City" << endl;
             cout << "Enter City first Char: ";
             cin >> city;
-            if(city==c1.getcity[0]){
-                cout << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity()<<endl;
+            if (city == c1.getcity[0])
+            {
+                cout << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity() << endl;
             }
-            if(city==c2.getcity[0]){
-                cout << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity()<<endl;
+            if (city == c2.getcity[0])
+            {
+                cout << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity() << endl;
             }
-            if(city==c3.getcity[0]){
-                cout << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity()<<endl;
+            if (city == c3.getcity[0])
+            {
+                cout << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity() << endl;
             }
-            if(city==c4.getcity[0]){
-                cout << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity()<<endl;
+            if (city == c4.getcity[0])
+            {
+                cout << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity() << endl;
             }
-            if(city==c5.getcity[0]){
-                cout << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity()<<endl;
+            if (city == c5.getcity[0])
+            {
+                cout << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity() << endl;
             }
-            else{
-                cout<<"No User Found"<<endl;
+            else
+            {
+                cout << "No User Found" << endl;
             }
             break;
         case 4:
             // total donations ;
-            cout << "Total Donations: "<< Bank::gettotaldonation();
-            
+            cout << "Total Donations: " << Bank::gettotaldonation();
+
             break;
         default:
             cout << "Invalid Option\n";
