@@ -65,12 +65,16 @@ int main()
     int a, b, c, d, e;
     cout << "Client 1" << endl;
     c1.setDetails();
+    std::cout << "\x1B[2J\x1B[H";
     cout << "Client 2" << endl;
     c2.setDetails();
+    std::cout << "\x1B[2J\x1B[H";
     cout << "Client 3" << endl;
     c3.setDetails();
+    std::cout << "\x1B[2J\x1B[H";
     cout << "Client 4" << endl;
     c4.setDetails();
+    std::cout << "\x1B[2J\x1B[H";
     cout << "Client 5" << endl;
     c5.setDetails();
 
