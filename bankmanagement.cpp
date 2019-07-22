@@ -43,6 +43,7 @@ public:
     {
         client_donation += amt;
         total_donation += amt;
+        client_balance -=amt;
     }
     int getTotalDonation()
     {
