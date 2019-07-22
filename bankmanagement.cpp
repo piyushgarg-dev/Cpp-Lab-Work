@@ -58,6 +58,7 @@ public:
 
 int Bank::total_donation = 0;
 
+
 int main()
 {
     Bank c1, c2, c3, c4, c5;
@@ -76,7 +77,7 @@ int main()
     int ch = 1;
     char city;
     int amt = 0;
-
+    std::cout << "\x1B[2J\x1B[H";
     cout << "------| Welcome to Bank |------\n";
     do
     {
@@ -91,7 +92,7 @@ int main()
         {
         case 1:
             //selectClient ;
-            system("CLS");
+            std::cout << "\x1B[2J\x1B[H";
             cout << "Select Client \n";
             cout << "S.no\tName\tBalance\n";
             cout << "1.\t" << c1.getname() << "\t" << c1.getbalance() << endl;
@@ -103,6 +104,7 @@ int main()
             switch (ch)
             {
             case 1:
+            std::cout << "\x1B[2J\x1B[H";
                 cout << c1.getname() << endl;
                 cout << "Press 1. Get Info\n";
                 cout << "Press 2. Debit\n";
@@ -112,10 +114,12 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "ID\tName\1tBalance\tCity\n";
                     cout << c1.getid() << "\t" << c1.getname() << "\t" << c1.getbalance() << "\t" << c1.getcity() << endl;
                     break;
                 case 2: // debit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to Debit: ";
                     cin >> amt;
                     if (c1.getbalance() > amt)
@@ -131,12 +135,14 @@ int main()
 
                     break;
                 case 3: // credit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to credit: ";
                     cin >> amt;
                     c1.credit(amt);
                     amt = 0;
                     break;
                 case 4: // Add donation
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Enter Donation Amount: ";
                     cin >> amt;
                     c1.donate(amt);
@@ -147,6 +153,7 @@ int main()
                 }
                 break;
             case 2:
+            std::cout << "\x1B[2J\x1B[H";
                 // c2
                 cout << c2.getname() << endl;
                 cout << "Press 1. Get Info\n";
@@ -157,10 +164,12 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "ID\tName\1tBalance\tCity\n";
                     cout << c2.getid() << "\t" << c2.getname() << "\t" << c2.getbalance() << "\t" << c2.getcity() << endl;
                     break;
                 case 2: // debit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to Debit: ";
                     cin >> amt;
                     if (c2.getbalance() > amt)
@@ -176,12 +185,14 @@ int main()
 
                     break;
                 case 3: // credit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to credit: ";
                     cin >> amt;
                     c2.credit(amt);
                     amt = 0;
                     break;
                 case 4: // Add donation
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Enter Donation Amount: ";
                     cin >> amt;
                     c2.donate(amt);
@@ -192,6 +203,7 @@ int main()
                 }
                 break;
             case 3:
+            std::cout << "\x1B[2J\x1B[H";
                 // c3
                 cout << c3.getname() << endl;
                 cout << "Press 1. Get Info\n";
@@ -202,10 +214,12 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "ID\tName\1tBalance\tCity\n";
                     cout << c3.getid() << "\t" << c3.getname() << "\t" << c3.getbalance() << "\t" << c3.getcity() << endl;
                     break;
                 case 2: // debit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to Debit: ";
                     cin >> amt;
                     if (c3.getbalance() > amt)
@@ -221,12 +235,14 @@ int main()
 
                     break;
                 case 3: // credit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to credit: ";
                     cin >> amt;
                     c3.credit(amt);
                     amt = 0;
                     break;
                 case 4: // Add donation
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Enter Donation Amount: ";
                     cin >> amt;
                     c3.donate(amt);
@@ -236,6 +252,7 @@ int main()
                     cout << "Invalid Option" << endl;
                 }
                 break;
+                std::cout << "\x1B[2J\x1B[H";
             case 4:
                 // c4
                 cout << c2.getname() << endl;
@@ -247,10 +264,12 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "ID\tName\1tBalance\tCity\n";
                     cout << c4.getid() << "\t" << c4.getname() << "\t" << c4.getbalance() << "\t" << c4.getcity() << endl;
                     break;
                 case 2: // debit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to Debit: ";
                     cin >> amt;
                     if (c4.getbalance() > amt)
@@ -266,12 +285,14 @@ int main()
 
                     break;
                 case 3: // credit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to credit: ";
                     cin >> amt;
                     c4.credit(amt);
                     amt = 0;
                     break;
                 case 4: // Add donation
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Enter Donation Amount: ";
                     cin >> amt;
                     c4.donate(amt);
@@ -283,6 +304,7 @@ int main()
                 break;
             case 5:
                 // c5
+                std::cout << "\x1B[2J\x1B[H";
                 cout << c2.getname() << endl;
                 cout << "Press 1. Get Info\n";
                 cout << "Press 2. Debit\n";
@@ -292,10 +314,12 @@ int main()
                 switch (ch)
                 {
                 case 1: //getinfo;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "ID\tName\tBalance\tCity\n";
                     cout << c5.getid() << "\t" << c5.getname() << "\t" << c5.getbalance() << "\t" << c5.getcity() << endl;
                     break;
                 case 2: // debit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to Debit: ";
                     cin >> amt;
                     if (c5.getbalance() > amt)
@@ -311,12 +335,14 @@ int main()
 
                     break;
                 case 3: // credit;
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Amount to credit: ";
                     cin >> amt;
                     c5.credit(amt);
                     amt = 0;
                     break;
                 case 4: // Add donation
+                std::cout << "\x1B[2J\x1B[H";
                     cout << "Enter Donation Amount: ";
                     cin >> amt;
                     c5.donate(amt);
@@ -331,6 +357,7 @@ int main()
             }
             break;
         case 2:
+        std::cout << "\x1B[2J\x1B[H";
             // getMaxDonation ;
 
             a = c1.getdonation();
@@ -370,6 +397,7 @@ int main()
             }
             break;
         case 3:
+        std::cout << "\x1B[2J\x1B[H";
             //searchbycity ;
             cout << "Search By City" << endl;
             cout << "Enter City first Char: ";
@@ -400,6 +428,7 @@ int main()
             }
             break;
         case 4:
+        std::cout << "\x1B[2J\x1B[H";
             // total donations ;
             cout << "Total Donations: " << Bank::gettotaldonation() << endl;
 
