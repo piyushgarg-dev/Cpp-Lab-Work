@@ -1,5 +1,5 @@
 /*
-unshift(&arr[], num, size) --> Inserts an element at start
+Author: Piyush Garg
  */
 #include <iostream>
 using namespace std;
