@@ -59,17 +59,18 @@ public:
         int num = 0;
         cout << "Enter Element to insert: ";
         cin >> num;
-        size++;
+        
         int middle = size / 2;
+        size++;
         int newarray[size];
         for (int i = 0; i < middle; i++)
         {
             newarray[i] = arr[i];
         }
         newarray[middle] = num;
-        for (int i = middle+1 ; i < size; i++)
+        for (int i = middle ; i < size; i++)
         {
-            newarray[i] = arr[i];
+            newarray[i+1] = arr[i];
         }
         for (int i = 0; i < size; i++)
         {
@@ -118,6 +119,13 @@ public:
         if(!flag){
             cout<<"Not Found!"<<endl;
         }
+    }
+    void deletemiddle(){
+        int middle = size/2;
+        for(int i=middle; i<size;i++){
+            arr[i]=arr[i+1];
+        }
+        size--;
     }
     void binary(){
         int s;
@@ -211,6 +219,10 @@ int main()
                 cout<<"\n";
                 break;
                 case 2: // det at middle;
+                cout << "\033[2J\033[1;1H";
+                a1.deletemiddle();
+                a1.display();
+                cout<<"\n";
                 
                 break;
                 case 3: // del at end;
