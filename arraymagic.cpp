@@ -108,7 +108,7 @@ public:
     void linerar(){
         int s;
         int flag=0;
-        cout<<"Enter Element to be searhed: ";
+        cout<<"Enter Element to be searched: ";
         cin>>s;
         for(int i=0; i<size;i++){
             if(arr[i]==s){
@@ -138,7 +138,7 @@ public:
         while(beg<=end){
             mid = (beg+end)/2;
             if(arr[mid]==s){
-                cout<<"[ "<<mid<<" ]:"<<arr[mid]<<endl;
+                cout<<"[ "<<mid<<" ]: "<<arr[mid]<<endl;
                 flag=1;
                 break;
             }
