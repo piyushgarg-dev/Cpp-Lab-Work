@@ -29,7 +29,12 @@ class Weight{
             }
         }
         void multiply(Weight obj){
-
+            total_kgs = kilos + obj.getkilos();
+            total_gms = grams + obj.getgms();
+            while(total_gms>=1000){
+                total_gms -= 1000;
+                total_kgs++;
+            }
         }
 
         float getkilos(){
@@ -47,13 +52,16 @@ class Weight{
 
 int main(){
     Weight w1,w2;
-
+    
     cout<<"Weight 1"<<endl;
     w1.get();
     cout<<"Weight 2"<<endl;
     w2.get();
 
     w1.add(w2);
+    w1.display();
+
+    w1.multiply(w2);
     w1.display();
 
 }
