@@ -4,7 +4,7 @@ using namespace std;
 int cube(int n)
 {
 
-    return n * n * n;
+    return n * n * n * n;
 }
 
 int isPrime(int n)
