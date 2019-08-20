@@ -1,14 +1,14 @@
 /*
 String Functions
 
-strlen - done
-strcmp - done
-strcmpi - done
-strcat - done
-strrev - done
-strcpy - done
-strupr
-strlwr
+1.strlen - done
+2.strcmp - done
+3.strcmpi - done
+4.strcat - done
+5.strrev - done
+6.strcpy - done
+7.strupr
+8.strlwr
 
 */
 #include <iostream>
@@ -37,7 +37,7 @@ int myStrcmp(char str1[], char str2[])
     }
     if (len1 != len2)
     {
-        return 0;
+        return 1;
     }
     else
     {
@@ -48,7 +48,7 @@ int myStrcmp(char str1[], char str2[])
                 return int(str1[i] - str2[i]);
             }
         }
-        return 1;
+        return 0;
     }
 }
 
@@ -66,7 +66,7 @@ int myStrcmpi(char str1[], char str2[])
     }
     if (len1 != len2)
     {
-        return 0;
+        return 1;
     }
     else
     {
@@ -81,7 +81,7 @@ int myStrcmpi(char str1[], char str2[])
                 return int(str1[i] - str2[i]);
             }
         }
-        return 1;
+        return 0;
     }
 }
 
@@ -127,7 +127,68 @@ void myStrcpy(char *str, char *value)
         value++;
     }
 }
+void myStrupr(char *str){
+    while(*str != '\0'){
+        if(int(*str)>=97 && int(*str)<=122)
+        *str-=32;
+
+        str++;
+    }
+}
+
+void myStrlwr(char *str){
+    while(*str != '\0'){
+        if(int(*str)>=65 && int(*str)<=90)
+        *str+=32;
+
+        str++;
+    }
+}
 
 int main()
 {
+   char str1[100],str2[100];
+
+   cout<<"Enter String 1: ";
+   cin>>str1;
+
+   cout<<"Enter String 2: ";
+   cin>>str2;
+
+   cout<<"Equal (Case-Sensetive) : ";
+   if(!myStrcmp(str1,str2)){
+       cout<<"True"<<endl;
+   }else{
+       cout<<"False"<<endl;
+   }
+
+   cout<<"Equal (Case-InSensetive) : ";
+    if(!myStrcmpi(str1,str2)){
+       cout<<"True"<<endl;
+   }else{
+       cout<<"False"<<endl;
+   }
+
+   cout<<"Length (Str 1): "<<myStrlen(str1)<<endl;
+    cout<<"Length (Str 2): "<<myStrlen(str2)<<endl;
+
+    myStrlwr(str1);
+    cout<< "Lower (Str 1): "<<str1<<endl;
+
+    myStrlwr(str2);
+    cout<< "Lower (Str 2): "<<str2<<endl;
+
+    myStrupr(str1);
+    cout<< "Upper (Str 1): "<<str1<<endl;
+
+    myStrupr(str2);
+    cout<< "Upper (Str 2): "<<str2<<endl;
+
+    myStrcat(str1,str2);
+    cout<<"Concatinating Str1 and Str2"<<endl;
+    cout<<"Str1 = "<<str1<<endl;
+
+
+
+
 }
