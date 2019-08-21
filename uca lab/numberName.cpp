@@ -22,9 +22,13 @@ int main()
 
   while (1)
   {
-    cout << endl;
+    cout << "\nEnter Number: ";
     cin >> num;
     int len = getNumLength(num);
+    if(len>4){
+      cout<<"Please enter a number less than 4 digits"<<endl;
+      continue;
+    }
     if (num >= 10 && num <= 19)
     {
       switch (num)
