@@ -1,38 +1,7 @@
 #include <iostream>
 using namespace std;
-
-int getNumLength(int num)
-{
-  int temp = num;
-  int length = 0;
-  while (num > 0)
-  {
-    num = num / 10;
-    length++;
-  }
-  return length;
-}
-
-char single_digit[][11] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
-char two_digit[][11] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty"};
-
-int main()
-{
-  int num;
-
-  while (1)
-  {
-    cout << "\nEnter Number: ";
-    cin >> num;
-    int len = getNumLength(num);
-    if (len > 4)
-    {
-      cout << "Please enter a number less than 4 digits" << endl;
-      continue;
-    }
-    if (num >= 10 && num <= 19)
-    {
-      switch (num)
+void printEleventoNineteen(int num){
+ switch (num)
       {
       case 10:
         cout << "ten";
@@ -65,6 +34,39 @@ int main()
         cout << "ninteen";
         break;
       }
+}
+int getNumLength(int num)
+{
+  int temp = num;
+  int length = 0;
+  while (num > 0)
+  {
+    num = num / 10;
+    length++;
+  }
+  return length;
+}
+
+char single_digit[][11] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+char two_digit[][11] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty"};
+
+int main()
+{
+  int num;
+
+  while (1)
+  {
+    cout << "\nEnter Number: ";
+    cin >> num;
+    int len = getNumLength(num);
+    if (len > 4)
+    {
+      cout << "Please enter a number less than 4 digits" << endl;
+      continue;
+    }
+    if (num >= 10 && num <= 19)
+    {
+     printEleventoNineteen(num);
       continue;
     }
 
@@ -87,39 +89,7 @@ int main()
       }
       if (num >= 10 && num <= 19)
       {
-        switch (num)
-        {
-        case 10:
-          cout << "ten";
-          break;
-        case 11:
-          cout << "eleven";
-          break;
-        case 12:
-          cout << "twelve";
-          break;
-        case 13:
-          cout << "thirteen";
-          break;
-        case 14:
-          cout << "forteen";
-          break;
-        case 15:
-          cout << "fifteen";
-          break;
-        case 16:
-          cout << "sixteen";
-          break;
-        case 17:
-          cout << "seventeen";
-          break;
-        case 18:
-          cout << "eighteen";
-          break;
-        case 19:
-          cout << "ninteen";
-          break;
-        }
+        printEleventoNineteen(num);
         continue;
       }
       if (len == 2 && num >= 20)
@@ -142,39 +112,7 @@ int main()
       {
         if (num >= 10 && num <= 19)
         {
-          switch (num)
-          {
-          case 10:
-            cout << "ten";
-            break;
-          case 11:
-            cout << "eleven";
-            break;
-          case 12:
-            cout << "twelve";
-            break;
-          case 13:
-            cout << "thirteen";
-            break;
-          case 14:
-            cout << "forteen";
-            break;
-          case 15:
-            cout << "fifteen";
-            break;
-          case 16:
-            cout << "sixteen";
-            break;
-          case 17:
-            cout << "seventeen";
-            break;
-          case 18:
-            cout << "eighteen";
-            break;
-          case 19:
-            cout << "ninteen";
-            break;
-          }
+          printEleventoNineteen(num);
           continue;
         }
         num = num - (num / 100) * 100;
@@ -192,39 +130,7 @@ int main()
         }
         if (num >= 10 && num <= 19)
         {
-          switch (num)
-          {
-          case 10:
-            cout << "ten";
-            break;
-          case 11:
-            cout << "eleven";
-            break;
-          case 12:
-            cout << "twelve";
-            break;
-          case 13:
-            cout << "thirteen";
-            break;
-          case 14:
-            cout << "forteen";
-            break;
-          case 15:
-            cout << "fifteen";
-            break;
-          case 16:
-            cout << "sixteen";
-            break;
-          case 17:
-            cout << "seventeen";
-            break;
-          case 18:
-            cout << "eighteen";
-            break;
-          case 19:
-            cout << "ninteen";
-            break;
-          }
+          printEleventoNineteen(num);
           continue;
         }
         if (len == 2 && num >= 20)
