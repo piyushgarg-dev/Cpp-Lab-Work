@@ -154,6 +154,8 @@ int main()
 
    cout<<"Enter String 2: ";
    cin>>str2;
+   
+   
 
    cout<<"Equal (Case-Sensetive) : ";
    if(!myStrcmp(str1,str2)){
