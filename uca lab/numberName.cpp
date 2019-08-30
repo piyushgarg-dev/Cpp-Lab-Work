@@ -1,40 +1,6 @@
 #include <iostream>
 using namespace std;
-void printEleventoNineteen(int num){
- switch (num)
-      {
-      case 10:
-        cout << "ten";
-        break;
-      case 11:
-        cout << "eleven";
-        break;
-      case 12:
-        cout << "twelve";
-        break;
-      case 13:
-        cout << "thirteen";
-        break;
-      case 14:
-        cout << "forteen";
-        break;
-      case 15:
-        cout << "fifteen";
-        break;
-      case 16:
-        cout << "sixteen";
-        break;
-      case 17:
-        cout << "seventeen";
-        break;
-      case 18:
-        cout << "eighteen";
-        break;
-      case 19:
-        cout << "ninteen";
-        break;
-      }
-}
+
 int getNumLength(int num)
 {
   int temp = num;
@@ -48,7 +14,7 @@ int getNumLength(int num)
 }
 
 char single_digit[][11] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
-char two_digit[][11] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty"};
+char two_digit[][11] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty", "", "eleven", "twelve", "thirteen", "forteen", "fifteen", "sixteen", "seventeen", "eighteen", "ninteen"};
 
 int main()
 {
@@ -66,7 +32,7 @@ int main()
     }
     if (num >= 10 && num <= 19)
     {
-     printEleventoNineteen(num);
+      cout << two_digit[num];
       continue;
     }
 
@@ -89,7 +55,7 @@ int main()
       }
       if (num >= 10 && num <= 19)
       {
-        printEleventoNineteen(num);
+        cout << two_digit[num];
         continue;
       }
       if (len == 2 && num >= 20)
@@ -105,14 +71,15 @@ int main()
       //cout<<"Num"<<num;
       len = getNumLength(num);
       //cout<<"Length: "<<len;
-      if(len==1){
-        cout<<single_digit[num];
+      if (len == 1)
+      {
+        cout << single_digit[num];
       }
       if (len == 2)
       {
         if (num >= 10 && num <= 19)
         {
-          printEleventoNineteen(num);
+          cout << two_digit[num];
           continue;
         }
         num = num - (num / 100) * 100;
@@ -130,7 +97,7 @@ int main()
         }
         if (num >= 10 && num <= 19)
         {
-          printEleventoNineteen(num);
+          cout << two_digit[num];
           continue;
         }
         if (len == 2 && num >= 20)
